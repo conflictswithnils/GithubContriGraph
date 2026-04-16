@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  launchd job – runs run_local.sh every day at 12:00 local time.
+
+  Installation:
+    1. Copy this file to ~/Library/LaunchAgents/
+    2. Edit the two CHANGE_ME placeholders (your macOS username and repo path)
+    3. launchctl load ~/Library/LaunchAgents/com.pixelart.autocommit.plist
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.pixelart.autocommit</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/CHANGE_ME/path/to/TestGithubContriGraph/run_local.sh</string>
+    </array>
+
+    <!-- Run every day at 12:00 local time -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>12</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <!-- Log output (optional – adjust path as needed) -->
+    <key>StandardOutPath</key>
+    <string>/Users/CHANGE_ME/Library/Logs/pixelart_autocommit.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/CHANGE_ME/Library/Logs/pixelart_autocommit.log</string>
+
+    <!-- Only run while logged in (LaunchAgents behaviour) -->
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>
