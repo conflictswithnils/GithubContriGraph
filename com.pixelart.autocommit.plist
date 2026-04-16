@@ -17,7 +17,7 @@
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/Users/CHANGE_ME/path/to/TestGithubContriGraph/run_local.sh</string>
+        <string>/Users/nilsreinhardt/Code/TestGithubContriGraph/run_local.sh</string>
     </array>
 
     <!-- Run every day at 12:00 local time -->
@@ -31,9 +31,9 @@
 
     <!-- Log output (optional – adjust path as needed) -->
     <key>StandardOutPath</key>
-    <string>/Users/CHANGE_ME/Library/Logs/pixelart_autocommit.log</string>
+    <string>/Users/nilsreinhardt/Library/Logs/pixelart_autocommit.log</string>
     <key>StandardErrorPath</key>
-    <string>/Users/CHANGE_ME/Library/Logs/pixelart_autocommit.log</string>
+    <string>/Users/nilsreinhardt/Library/Logs/pixelart_autocommit.log</string>
 
     <!-- Only run while logged in (LaunchAgents behaviour) -->
     <key>RunAtLoad</key>
