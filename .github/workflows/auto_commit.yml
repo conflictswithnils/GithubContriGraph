@@ -35,4 +35,9 @@ jobs:
         run: python commit_script.py
 
       - name: Push commits (if any were made)
-        run: git push
+        run: |
+          if ! git diff --quiet origin/$(git branch --show-current)..HEAD 2>/dev/null; then
+            git push
+          else
+            echo "No new commits – nothing to push."
+          fi
