@@ -57,4 +57,4 @@ Das Script zieht zuerst die neuesten Änderungen, führt dann `commit_script.py`
 
 ## GitHub Actions (Alternative)
 
-Die Datei `.github/workflows/auto_commit.yml` enthält einen Workflow, der das Script täglich auf GitHub-Servern ausführt – ohne dass der Mac laufen muss.
+Die Datei `.github/workflows/auto_commit.yml` enthält einen Workflow, der das Script täglich auf GitHub-Servern ausführt.
